@@ -37,6 +37,9 @@ Plugin 'kien/ctrlp.vim'
 " Solarized theme
 Plugin 'altercation/vim-colors-solarized'
 
+" Multiple cursors
+Plugin 'terryma/vim-multiple-cursors'
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -103,8 +106,8 @@ set incsearch " find the next match as the search term is being typed
 set hlsearch " highlight search matches
 
 " Mappings for buffer manipulation
-map <c-n> :bp!<cr>
-map <c-m> :bn!<cr>
+map <c-j> :bp!<cr>
+map <c-k> :bn!<cr>
 " map <Leader>bd :bd<cr>
 map <Leader>bd :bp\|bd #<cr>
 map <c-b> :b#<cr>
@@ -126,6 +129,9 @@ let g:airline#extensions#tabline#fnamemod = ':t'
 
 " Some file types configs
 autocmd filetype make setlocal noexpandtab
+
+" Let ctrlp use ag
+let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
 
 " Ignore dirs for ctrlp
 let g:ctrlp_custom_ignore = {
