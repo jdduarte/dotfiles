@@ -1,61 +1,31 @@
 set nocompatible              " be iMproved, required
-filetype off                  " required
 
-" set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-" alternatively, pass a path where Vundle should install plugins
-"call vundle#begin('~/some/path/here')
+" vim-plug configurationn here:
+call plug#begin('~/.vim/plugged')
 
-" let Vundle manage Vundle, required
-Plugin 'gmarik/Vundle.vim'
+" Javascript syntax and ident.
+Plug 'https://github.com/pangloss/vim-javascript'
 
-" Plugins for JavaScript syntax highlight and ident guides
-Plugin 'jelera/vim-javascript-syntax'
-Plugin 'pangloss/vim-javascript'
-"Plugin 'Yggdroot/indentLine'
+" Automatic close of brackets, quotes, etc.
+Plug 'https://github.com/Raimondi/delimitMate'
 
-" Plugin for automating close of brackets, quotes, etc.
-Plugin 'Raimondi/delimitMate'
-
-" Linting plugin for hook up with JSHint
-Plugin 'scrooloose/syntastic'
-
-" Nerd tree
-Plugin 'scrooloose/nerdtree'
+" NERDTree
+Plug 'https://github.com/scrooloose/nerdtree'
 
 " Airline
-Plugin 'bling/vim-airline'
+Plug 'https://github.com/vim-airline/vim-airline'
 
-" Auto completion
-Plugin 'Valloric/YouCompleteMe'
-Plugin 'marijnh/tern_for_vim'
+" ctrlp to easily search for files.
+Plug 'https://github.com/ctrlpvim/ctrlp.vim'
 
-" ctrlp to easily open files
-Plugin 'kien/ctrlp.vim'
+" Multiple cursors.
+Plug 'https://github.com/terryma/vim-multiple-cursors'
 
-" Solarized theme
-Plugin 'altercation/vim-colors-solarized'
+" Auto complete
+Plug 'https://github.com/Valloric/YouCompleteMe'
 
-" Multiple cursors
-Plugin 'terryma/vim-multiple-cursors'
-
-" All of your Plugins must be added before the following line
-call vundle#end()            " required
-filetype plugin indent on    " required
-" To ignore plugin indent changes, instead use:
-"filetype plugin on
-"
-" Brief help
-" :PluginList       - lists configured plugins
-" :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
-" :PluginSearch foo - searches for foo; append `!` to refresh local cache
-" :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
-"
-" see :h vundle for more details or wiki for FAQ
-" Put your non-Plugin stuff after this line
-
-
+" Initialize plugin system
+call plug#end()
 
 " Threepwood's configuration here:
 "
@@ -91,8 +61,8 @@ set expandtab
 set shiftwidth=4
 set softtabstop=4
 
-" Set the ruler at 80 chars
-set colorcolumn=81
+" Set the ruler at 100 chars
+set colorcolumn=101
 highlight ColorColumn guibg=Gray14
 let &colorcolumn=join(range(81,999),",")
 let &colorcolumn="80,".join(range(120,999),",")
