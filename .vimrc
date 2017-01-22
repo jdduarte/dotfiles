@@ -113,3 +113,6 @@ let g:ctrlp_custom_ignore = {
 " Syntastic configuration
 let g:syntastic_aggregate_errors = 1
 let g:syntastic_javascript_checkers = ['jshint', 'jscs']
+
+" Enable JSDoc highlighting
+let g:javascript_plugin_jsdoc = 1
