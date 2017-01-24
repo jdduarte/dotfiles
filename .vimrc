@@ -1,4 +1,4 @@
-set nocompatible              " be iMproved, required
+set nocompatible
 
 " vim-plug configurationn here:
 call plug#begin('~/.vim/plugged')
@@ -29,12 +29,14 @@ call plug#end()
 
 " Threepwood's configuration here:
 "
-" Enable the 256 colour pallet, enable syntax highlighting, let Vim know we
-" want a dark background and light foreground and finally set a different
-" colour scheme.
-set t_Co=256
+" Set backspace behaviour.
+set backspace=indent,eol,start
+"
+" Enable 24bit colors and syntax highlighting.
 syntax on
-set background=dark
+set termguicolors
+
+" Set the color scheme (available under ~/.vim/colors)
 colorscheme molokai
 
 " use mouse on the terminal
@@ -64,10 +66,6 @@ set softtabstop=4
 " Set the ruler at 100 chars
 set colorcolumn=101
 highlight ColorColumn guibg=Gray14
-let &colorcolumn=join(range(81,999),",")
-let &colorcolumn="80,".join(range(120,999),",")
-"highlight OverLength ctermbg=red ctermfg=white guibg=#592929
-"match OverLength /\%81v.\+/
 
 " Searching
 set ignorecase " ignore case when searching
@@ -90,7 +88,7 @@ let NERDTreeShowHidden=1
 map <Leader>nt :NERDTreeToggle<cr>
 
 " Quits vim if teh NERDTree is the only buffer open
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
 " Airline options
 set laststatus=2
