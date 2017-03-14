@@ -24,6 +24,9 @@ Plug 'https://github.com/terryma/vim-multiple-cursors'
 " Auto complete
 Plug 'https://github.com/Valloric/YouCompleteMe'
 
+" dbext
+Plug 'https://github.com/vim-scripts/dbext.vim'
+
 " Initialize plugin system
 call plug#end()
 
@@ -37,7 +40,7 @@ syntax on
 set termguicolors
 
 " Set the color scheme (available under ~/.vim/colors)
-colorscheme molokai
+colorscheme spacegray
 
 " use mouse on the terminal
 set mouse=a 
@@ -114,3 +117,6 @@ let g:syntastic_javascript_checkers = ['jshint', 'jscs']
 
 " Enable JSDoc highlighting
 let g:javascript_plugin_jsdoc = 1
+
+" Set the dbext PostgreSQL profile
+let g:dbext_default_profile_PG = 'type=PGSQL:user=reg:passwd=regregreg:host=localhost:port=5432:dbname=elgin'
