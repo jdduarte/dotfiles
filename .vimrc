@@ -24,6 +24,9 @@ Plug 'https://github.com/terryma/vim-multiple-cursors'
 " Auto complete
 Plug 'https://github.com/Valloric/YouCompleteMe'
 
+" Tern JS
+Plug 'https://github.com/ternjs/tern_for_vim'
+
 " dbext
 Plug 'https://github.com/vim-scripts/dbext.vim'
 
@@ -92,6 +95,10 @@ map <Leader>nt :NERDTreeToggle<cr>
 
 " Quits vim if teh NERDTree is the only buffer open
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+
+" Use omnicompletion with ctrl+space
+inoremap <C-Space> <C-x><C-o>
+inoremap <C-@> <C-Space>
 
 " Airline options
 set laststatus=2
