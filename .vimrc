@@ -30,6 +30,16 @@ Plug 'https://github.com/ternjs/tern_for_vim'
 " dbext
 Plug 'https://github.com/vim-scripts/dbext.vim'
 
+" Syntastic
+Plug 'https://github.com/vim-syntastic/syntastic'
+
+" Smooth scroll
+Plug 'https://github.com/terryma/vim-smooth-scroll'
+
+" Git
+Plug 'https://github.com/tpope/vim-fugitive'
+Plug 'https://github.com/tommcdo/vim-fubitive'
+
 " Initialize plugin system
 call plug#end()
 
@@ -89,6 +99,12 @@ map <c-b> :b#<cr>
 " Share the system clipboard
 set clipboard=unnamed
 
+" Persistent undo
+set undofile
+set undodir=$HOME/.vim/undo
+set undolevels=1000
+set undoreload=10000
+
 " Options for NERDTree and mappings
 let NERDTreeShowHidden=1
 map <Leader>nt :NERDTreeToggle<cr>
@@ -119,8 +135,17 @@ let g:ctrlp_custom_ignore = {
   \ }
 
 " Syntastic configuration
-let g:syntastic_aggregate_errors = 1
-let g:syntastic_javascript_checkers = ['jshint', 'jscs']
+" let g:syntastic_aggregate_errors = 1
+" let g:syntastic_javascript_checkers = ['eslint']
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+let g:syntastic_javascript_checkers = ['eslint']
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_loc_list_height = 5
+let g:syntastic_auto_loc_list = 0
+let g:syntastic_check_on_open = 0
+let g:syntastic_check_on_wq = 0
 
 " Enable JSDoc highlighting
 let g:javascript_plugin_jsdoc = 1
