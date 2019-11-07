@@ -3,6 +3,9 @@ set nocompatible
 " vim-plug configurationn here:
 call plug#begin('~/.vim/plugged')
 
+" Base16 colors
+Plug 'chriskempson/base16-vim'
+
 " Javascript syntax and ident.
 Plug 'https://github.com/pangloss/vim-javascript'
 
@@ -23,9 +26,6 @@ Plug 'https://github.com/terryma/vim-multiple-cursors'
 
 " Auto complete
 Plug 'https://github.com/Valloric/YouCompleteMe'
-
-" Tern JS
-Plug 'https://github.com/ternjs/tern_for_vim'
 
 " dbext
 Plug 'https://github.com/vim-scripts/dbext.vim'
@@ -53,7 +53,7 @@ syntax on
 set termguicolors
 
 " Set the color scheme (available under ~/.vim/colors)
-colorscheme spacegray
+colorscheme base16-gruvbox-dark-pale
 
 " use mouse on the terminal
 set mouse=a 
