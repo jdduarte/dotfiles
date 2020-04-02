@@ -125,6 +125,7 @@ let g:airline#extensions#tabline#fnamemod = ':t'
 autocmd filetype make setlocal noexpandtab
 
 " Let ctrlp use ag
+let g:ctrlp_cmd = 'CtrlPMixed'
 let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
 
 " Ignore dirs for ctrlp
@@ -152,3 +153,6 @@ let g:javascript_plugin_jsdoc = 1
 
 " Set the dbext PostgreSQL profile
 let g:dbext_default_profile_PG = 'type=PGSQL:user=reg:passwd=regregreg:host=localhost:port=5432:dbname=elgin'
+
+" Define the :Wrap command
+command! -nargs=* Wrap set wrap linebreak nolist

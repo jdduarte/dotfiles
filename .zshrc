@@ -86,5 +86,5 @@ export JAVA_HOME=`/usr/libexec/java_home`
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias vim="/usr/local/Cellar/vim/8.1.2200/bin/vim"
+alias vim="/usr/local/Cellar/vim/8.2.0350/bin/vim"
 
