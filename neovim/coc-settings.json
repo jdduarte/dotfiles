@@ -1,0 +1,4 @@
+{
+  "prettier.formatterPriority": 1
+  "coc.preferences.formatOnSaveFiletypes": ["*"],
+}

@@ -76,7 +76,8 @@ export LANG=en_US.UTF-8
 # export SSH_KEY_PATH="~/.ssh/rsa_id"
 
 # JAVA_HOME
-export JAVA_HOME=`/usr/libexec/java_home`
+unset JAVA_HOME;
+export JAVA_HOME=$(/usr/libexec/java_home -v "11.0.12")
 
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
@@ -86,5 +87,5 @@ export JAVA_HOME=`/usr/libexec/java_home`
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias vim="/usr/local/Cellar/vim/8.2.0350/bin/vim"
+alias vim="nvim"
 

@@ -40,6 +40,9 @@ Plug 'https://github.com/terryma/vim-smooth-scroll'
 Plug 'https://github.com/tpope/vim-fugitive'
 Plug 'https://github.com/tommcdo/vim-fubitive'
 
+" Todo list
+Plug 'aserebryakov/vim-todo-lists'
+
 " Initialize plugin system
 call plug#end()
 
@@ -52,11 +55,15 @@ set backspace=indent,eol,start
 syntax on
 set termguicolors
 
+" Add the Dracola package
+packadd! dracula_pro
+
 " Set the color scheme (available under ~/.vim/colors)
-colorscheme base16-gruvbox-dark-pale
+let g:dracula_colorterm = 0
+colorscheme dracula_pro
 
 " use mouse on the terminal
-set mouse=a 
+set mouse=a
 set ttymouse=xterm2
 
 " Set line numbers ON
@@ -120,6 +127,7 @@ inoremap <C-@> <C-Space>
 set laststatus=2
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#fnamemod = ':t'
+let g:airline_theme='dracula_pro'
 
 " Some file types configs
 autocmd filetype make setlocal noexpandtab
@@ -153,6 +161,9 @@ let g:javascript_plugin_jsdoc = 1
 
 " Set the dbext PostgreSQL profile
 let g:dbext_default_profile_PG = 'type=PGSQL:user=reg:passwd=regregreg:host=localhost:port=5432:dbname=elgin'
+
+" Todo list configs
+let g:VimTodoListsMoveItems = 0
 
 " Define the :Wrap command
 command! -nargs=* Wrap set wrap linebreak nolist

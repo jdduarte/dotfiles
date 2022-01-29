@@ -7,7 +7,7 @@ module.exports = {
                 sourceBundleIdentifier === 'com.apple.mail' ||
                 sourceBundleIdentifier === 'com.tinyspeck.slackmacgap' ||
                 sourceBundleIdentifier === 'com.googlecode.iterm2',
-            browser: 'Google Chrome Canary'
+            browser: 'Google Chrome'
         }
     ]
 };
