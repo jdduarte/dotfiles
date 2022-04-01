@@ -75,6 +75,9 @@ export LANG=en_US.UTF-8
 # ssh
 # export SSH_KEY_PATH="~/.ssh/rsa_id"
 
+# PATH
+export PATH="$HOME/.local/bin:$PATH"
+
 # JAVA_HOME
 unset JAVA_HOME;
 export JAVA_HOME=$(/usr/libexec/java_home -v "11.0.12")
@@ -87,5 +90,6 @@ export JAVA_HOME=$(/usr/libexec/java_home -v "11.0.12")
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+alias sudo="sudo "
 alias vim="nvim"
 
