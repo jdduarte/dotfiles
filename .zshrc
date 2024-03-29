@@ -80,7 +80,10 @@ export PATH="$HOME/.local/bin:$PATH"
 
 # JAVA_HOME
 unset JAVA_HOME;
-export JAVA_HOME=$(/usr/libexec/java_home -v "11.0.12")
+export JAVA_HOME=$(/usr/libexec/java_home -v "17.0.10")
+
+# GEOSERVER_DATA_DIR
+export GEOSERVER_DATA_DIR="/Users/jdduarte/Projects/one.network/geoserver/data_dir"
 
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
@@ -93,3 +96,7 @@ export JAVA_HOME=$(/usr/libexec/java_home -v "11.0.12")
 alias sudo="sudo "
 alias vim="nvim"
 
+
+# Add JBang to environment
+alias j!=jbang
+export PATH="$HOME/.jbang/bin:$PATH"
