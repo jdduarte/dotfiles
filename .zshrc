@@ -2,7 +2,7 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH=/Users/jdduarte/.oh-my-zsh
+export ZSH=/Users/joaoduarte/.oh-my-zsh
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
@@ -82,9 +82,6 @@ export PATH="$HOME/.local/bin:$PATH"
 unset JAVA_HOME;
 export JAVA_HOME=$(/usr/libexec/java_home -v "17.0.10")
 
-# GEOSERVER_DATA_DIR
-export GEOSERVER_DATA_DIR="/Users/jdduarte/Projects/one.network/geoserver/data_dir"
-
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
@@ -95,7 +92,6 @@ export GEOSERVER_DATA_DIR="/Users/jdduarte/Projects/one.network/geoserver/data_d
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias sudo="sudo "
 alias vim="nvim"
-
 
 # Add JBang to environment
 alias j!=jbang
