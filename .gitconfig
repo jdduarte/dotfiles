@@ -1,0 +1,20 @@
+[user]
+       email = jdduarte@gmail.com
+       name = Joao Duarte
+       useConfigOnly = true
+[color]
+       ui = true
+[alias]
+       s = status
+       l = log --color --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%aN>%Creset'
+[core]
+       excludesfile = /Users/jdduarte/.gitignore_global
+       editor = nvim
+[push]
+       default = simple
+[includeIf "gitdir:~/Projects/one.network/"]
+  path = .gitconfig-one-network
+[pull]
+	rebase = false
+[rerere]
+	enabled = 1
