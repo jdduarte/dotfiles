@@ -80,7 +80,10 @@ export PATH="$HOME/.local/bin:$PATH"
 
 # JAVA_HOME
 unset JAVA_HOME;
-export JAVA_HOME=$(/usr/libexec/java_home -v "17.0.10")
+export JAVA_HOME=$(/usr/libexec/java_home -v "17.0.12")
+
+# npm Python config
+export npm_config_python=/opt/homebrew/bin/python3.11
 
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
@@ -96,3 +99,6 @@ alias vim="nvim"
 # Add JBang to environment
 alias j!=jbang
 export PATH="$HOME/.jbang/bin:$PATH"
+
+# Live Link App
+#export NODE_OPTIONS=--openssl-legacy-provider
